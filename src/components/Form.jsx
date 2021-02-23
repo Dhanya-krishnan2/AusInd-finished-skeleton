@@ -27,7 +27,7 @@ export default function Form() {
     }
     // setting it for address
     const handleAddressInputChange = (event) => {
-        setValues({ ...values, address: event.targer.value})
+        setValues( {...values, address: event.target.value})
     }
     // for the validation to happen setting up the hook
       const [valid, setValidation ] = useState(false);
@@ -83,7 +83,7 @@ export default function Form() {
                name="address"
                value={values.address}
         />
-        { submitted && !values.address ?<span> Please enter your phone number</span>: null}
+        { submitted && !values.address ?<span> Please enter your address</span>: null}
         
         
         <button class="form-field" type="submit">
